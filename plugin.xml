@@ -17,11 +17,12 @@
         <clobbers target="plugins.backgroundLocationServices"/>
     </js-module>
     
-    <preference name="ALERT_MSG" />
+    <preference name="ALERT_MSG" default="${EXECUTABLE_NAME} would like to use your location." />
 
     <!-- android -->
     <platform name="android">
-        <framework src="com.google.android.gms:play-services-location:+" />
+        <framework src="com.google.android.gms:play-services-location:$PS_VERSION" />
+        <preference name="PS_VERSION" default="11.6.2"/>
 
         <source-file src="src/android/BackgroundLocationServicesPlugin.java" target-dir="src/com/flybuy/cordova/location"/>
         <source-file src="src/android/BackgroundLocationUpdateService.java" target-dir="src/com/flybuy/cordova/location"/>
@@ -65,7 +66,7 @@
         
         <!-- Usage description of Motion, mandatory since iOS 10 -->
         <config-file target="*-Info.plist" parent="NSMotionUsageDescription">
-            <string>${EXECUTABLE_NAME} Would Like to Use Motion Data.</string>
+            <string>$ALERT_MSG</string>
         </config-file>
         
         <config-file target="*-Info.plist" parent="UIBackgroundModes">

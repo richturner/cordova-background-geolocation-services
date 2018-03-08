@@ -1,4 +1,19 @@
-# cordova-background-geolocation-services
+# cordova-background-geolocation-services [MODIFIED]
+This is a modified version of the plugin by pmwisdom [https://github.com/pmwisdom/cordova-background-geolocation-services](https://github.com/pmwisdom/cordova-background-geolocation-services).
+
+It allows the alert messages on iOS and play services version on Android to be configured using variables:
+
+```
+cordova plugin add https://github.com/richturner/cordova-background-geolocation-services --variable ALERT_MSG="\$\{EXECUTABLE_NAME\} requires your permission for e.g. EXACT PURPOSE OF APP HERE --variable PS_VERSION=11.8.0
+```
+This adds the following to config.xml:
+```xml
+<plugin name="org.flybuy.cordova.background-location-services" spec="https://github.com/richturner/cordova-background-geolocation-services">
+    <variable name="ALERT_MSG" value="${EXECUTABLE_NAME} requires your permission for e.g. EXACT PURPOSE OF APP HERE" />
+    <variable name="PS_VERSION" value="11.8.0" />
+</plugin>
+```
+
 Background Geolocation For Android and iOS with pure javascript callbacks.
 
 * Notice: This plugin needs a maintainer, if anyone is interested please make an issue. I no longer have the means to support this.
