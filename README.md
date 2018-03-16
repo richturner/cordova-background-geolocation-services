@@ -4,7 +4,7 @@ This is a modified version of the plugin by pmwisdom [https://github.com/pmwisdo
 It allows the alert messages on iOS and play services version on Android to be configured using variables:
 
 ```
-cordova plugin add https://github.com/richturner/cordova-background-geolocation-services --variable ALERT_MSG="\$\{EXECUTABLE_NAME\} requires your permission for e.g. EXACT PURPOSE OF APP HERE --variable PS_VERSION=11.8.0
+cordova plugin add https://github.com/richturner/cordova-background-geolocation-services --variable ALERT_MSG="\$\{EXECUTABLE_NAME\} requires your permission for e.g. EXACT PURPOSE OF APP HERE" --variable PS_VERSION=11.8.0
 ```
 This adds the following to config.xml:
 ```xml
