@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pmwisdom/cordova-background-geolocation-services.git"
+    "url": "git+https://github.com/richturner/cordova-background-geolocation-services.git"
   },
   "keywords": [
     "gps",
